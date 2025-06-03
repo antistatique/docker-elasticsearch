@@ -27,5 +27,6 @@ The following secrets need to be configured in your GitHub repository:
 1. Go to the [Actions workflow page](https://github.com/antistatique/docker-elasticsearch/actions/workflows/docker-build.yml)
 2. Click "Run workflow"
 3. Enter the desired Elasticsearch version (defaults to 8.18.1)
+   - Available Elasticsearch versions can be found at [Docker Hub Elasticsearch Tags](https://hub.docker.com/_/elasticsearch/tags)
 4. Choose whether to tag this version as latest (defaults to true)
 5. Click "Run workflow"
