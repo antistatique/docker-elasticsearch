@@ -12,7 +12,8 @@ docker pull antistatique/elasticsearch:latest
 
 This repository includes a GitHub Action workflow that can be manually triggered to:
 1. Build the Docker image with a specified Elasticsearch version
-2. Push the image to Docker Hub as `antistatique/elasticsearch:[version]` and `antistatique/elasticsearch:latest`
+2. Push the image to Docker Hub as `antistatique/elasticsearch:[version]` 
+3. Optionally tag the image as `antistatique/elasticsearch:latest`
 
 ### Required Secrets
 
@@ -26,4 +27,5 @@ The following secrets need to be configured in your GitHub repository:
 2. Select the "Build and Push Docker Image" workflow
 3. Click "Run workflow"
 4. Enter the desired Elasticsearch version (defaults to 8.18.1)
-5. Click "Run workflow"
+5. Choose whether to tag this version as latest (defaults to true)
+6. Click "Run workflow"

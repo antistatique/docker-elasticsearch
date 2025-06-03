@@ -8,6 +8,11 @@ on:
         required: true
         default: '8.18.1'
         type: string
+      tag_as_latest:
+        description: 'Tag this version as latest'
+        required: true
+        default: true
+        type: boolean
 
 jobs:
   build:
@@ -35,5 +40,5 @@ jobs:
           context: .
           push: true
           tags: |
-            antistatique/elasticsearch:latest
+            ${{ github.event.inputs.tag_as_latest == 'true' && 'antistatique/elasticsearch:latest' || '' }}
             antistatique/elasticsearch:${{ github.event.inputs.elasticsearch_version }}
